@@ -125,6 +125,11 @@ public class StockHistoryFragment extends BaseFragment<StockHistoryViewModel, St
         showSnackBar(msg);
     }*/
 
+    /*@Override
+    public void onPostSuccess(String msg) {
+        showSnackBar(msg);
+    }*/
+
     @Override
     public void onPostFailed(String msg) {
          showSnackBar(msg);
