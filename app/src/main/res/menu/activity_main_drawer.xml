@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/home"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_check_out"
+            android:icon="@drawable/ic_inventory"
+            android:visible="false"
+            android:title="@string/menu_outward" />
+
+        <item
+            android:id="@+id/nav_check_in"
+            android:icon="@drawable/ic_inventory"
+            android:visible="false"
+            android:title="@string/menu_inward" />
+
+    </group>
+
+    <item android:title="@string/menu_barcode">
+        <menu>
+            <group android:id="@+id/barcode"
+                android:visible="false"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_grpo"
+                    android:icon="@drawable/ic_products"
+                    android:visible="false"
+                    android:title="@string/menu_grpo"/>
+
+                <item
+                    android:id="@+id/nav_job_work"
+                    android:icon="@drawable/ic_customer"
+                    android:visible="false"
+                    android:title="@string/menu_job_work"/>
+
+                <item
+                    android:id="@+id/nav_sub_con"
+                    android:icon="@drawable/ic_my_order"
+                    android:visible="false"
+                    android:title="@string/menu_sub_con" />
+
+                <item
+                    android:id="@+id/nav_production"
+                    android:icon="@drawable/ic_feedback"
+                    android:visible="false"
+                    android:title="@string/menu_production"/>
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="@string/menu_scan_process">
+        <menu>
+            <group android:id="@+id/scanner"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_delivery"
+                    android:icon="@drawable/ic_my_order"
+                    android:title="@string/menu_delivery" />
+
+                <item
+                    android:id="@+id/nav_inv"
+                    android:icon="@drawable/ic_feedback"
+                    android:title="@string/menu_inv"/>
+
+                <item
+                    android:id="@+id/nav_gate_entry"
+                    android:visible="false"
+                    android:icon="@drawable/ic_my_order"
+                    android:title="@string/menu_gate_entry" />
+            </group>
+        </menu>
+    </item>
+
+
+    <group android:id="@+id/logout"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_change_psw"
+            android:icon="@drawable/ic_change_password"
+            android:title="@string/change_pwd"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:visible="false"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+
+    </group>
+</menu>

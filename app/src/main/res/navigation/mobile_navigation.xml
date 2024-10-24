@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.covalsys.phi_scanner.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_change_psw"
+            app:destination="@id/nav_change_psw"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_home"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_inv_history"
+            app:destination="@id/nav_inv_history" />
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_store_information"
+            app:destination="@+id/nav_store_information"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_delivery"
+        android:name="com.covalsys.phi_scanner.ui.delivery.DeliveryPickListFragment"
+        android:label="@string/menu_delivery"
+        tools:layout="@layout/fragment_delivery_pick_list">
+
+        <action
+            android:id="@+id/action_nav_delivery_to_nav_home"
+            app:destination="@id/nav_home" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inv"
+        android:name="com.covalsys.phi_scanner.ui.stock_count.StockCountScanFragment"
+        android:label="@string/menu_inv"
+        tools:layout="@layout/custom_stack_screen">
+
+        <action
+            android:id="@+id/action_nav_inv_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inv_history"
+        android:name="com.covalsys.phi_scanner.ui.stock_count_history.StockHistoryFragment"
+        android:label="@string/menu_inv_history"
+        tools:layout="@layout/stock_history_fragment">
+
+        <action
+            android:id="@+id/action_nav_inv_history_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_store_information"
+        android:name="com.covalsys.phi_scanner.ui.screen_shot.ListImageFragment"
+        android:label="@string/menu_inv_store_information"
+        tools:layout="@layout/list_image_fragment">
+
+        <action
+            android:id="@+id/nav_store_information_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>

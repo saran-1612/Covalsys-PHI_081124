@@ -1,0 +1,3 @@
+rootProject.name='Covalsys-PHI'
+include ':app'
+include ':customspinner'

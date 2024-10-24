@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="stockHistoryViewModel"
+            type="com.covalsys.phi_scanner.ui.stock_count_history.StockHistoryViewModel" />
+    </data>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_profile"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginStart="@dimen/dimen10dp"
+                android:layout_marginBottom="@dimen/dimen10dp"
+                android:layout_marginEnd="@dimen/dimen10dp">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/set_cnp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:padding="@dimen/dimen10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/recyclerViewList"
+                                android:divider="#ad5"
+                                android:dividerHeight="2dp"
+                                android:layout_below="@+id/searchView"/>
+
+                            <SearchView
+                                android:id="@+id/searchView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:queryHint="Search Here"
+                                android:iconifiedByDefault="false"
+                                android:layout_alignParentTop="true"/>
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+</layout>

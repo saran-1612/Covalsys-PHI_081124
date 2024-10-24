@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="customStackViewModel"
+            type="com.covalsys.phi_scanner.ui.stock_count.StockCountScanViewModel" />
+    </data>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/stack_btn"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:layout_marginEnd="@dimen/dimen10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/set_cnp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:imeOptions="actionNext"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/create_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:layout_marginEnd="@dimen/dimen10dp"
+                    android:text="@string/stack_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/locationSel"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Location"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:layout_marginEnd="@dimen/dimen5dp">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/tv_loc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen10dp"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:imeOptions="actionNext"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/dimen5dp"
+                    android:layout_marginEnd="@dimen/dimen10dp"
+                    android:hint="@string/scan_data">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/set_scanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:clickable="false"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/dimen10dp"
+                    android:layout_weight="1"
+                    android:hint="Item Type">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/et_itemType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/dimen50dp"
+                android:layout_marginTop="@dimen/dimen5dp"
+                android:layout_marginBottom="@dimen/dimen5dp"
+                android:padding="@dimen/dimen5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/scan_data">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/set_scanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:clickable="false"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginHorizontal="@dimen/dimen5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/dimen5dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+    </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/start_ses"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="@string/start_session"
+                    android:layout_marginStart="13dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/man_ses"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/manual"
+                    android:layout_marginStart="13dp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+</layout>
+
+<!-- <androidx.core.widget.NestedScrollView
+android:layout_width="match_parent"
+android:layout_height="wrap_content">-->
