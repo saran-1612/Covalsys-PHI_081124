@@ -149,4 +149,5 @@ public class StockHistoryFragment extends BaseFragment<StockHistoryViewModel, St
     public void onProfileGetFailed(String mag) {
         dataBinding.setCnp.setText("");
     }
+
 }
