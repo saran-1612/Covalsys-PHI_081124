@@ -114,26 +114,11 @@ public class StockHistoryFragment extends BaseFragment<StockHistoryViewModel, St
         historyAdapter.addCustomers(responseObjectList);
         historyAdapter.notifyDataSetChanged();
     }
-    /*private void setBatchList(List<StockHistoryModel.ResponseObject> responseObjectList){
-        historyAdapter.clearList();
-        historyAdapter.addCustomers(responseObjectList);
-        historyAdapter.notifyDataSetChanged();
-    }*/
 
     @Override
     public void onPostSuccess(String msg) {
             showSnackBar(msg);
     }
-
-    /*@Override
-    public void onPostSuccess(String msg) {
-        showSnackBar(msg);
-    }*/
-
-    /*@Override
-    public void onPostSuccess(String msg) {
-        showSnackBar(msg);
-    }*/
 
     @Override
     public void onPostFailed(String msg) {
